@@ -1,0 +1,362 @@
+
+.profile-page {
+  min-height: 100vh;
+  background: #fffaf2;
+  color: #30251c;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 7%;
+  background: #fff;
+  border-bottom: 1px solid #e9dfd1;
+}
+
+.profile-header a {
+  color: #6d5845;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 55px 22px;
+}
+
+.profile-eyebrow {
+  color: #a67a39;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.profile-content h1 {
+  margin: 10px 0;
+  font-family: Georgia, serif;
+  font-size: 42px;
+}
+
+.profile-description {
+  color: #817468;
+  line-height: 1.7;
+}
+
+/* Profile card */
+.profile-card {
+  margin-top: 30px;
+  padding: 32px;
+  border: 1px solid #e9dfd1;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 12px 30px #39210e0b;
+}
+
+/* Profile picture */
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 112px;
+  height: 112px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid #f0e3cd;
+  border-radius: 50%;
+  background: #f0e3cd;
+  color: #79562e;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.profile-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile photo buttons: aligned in one row */
+.profile-photo-actions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.profile-photo-actions .profile-edit-button,
+.profile-photo-actions .profile-camera-button,
+.profile-photo-actions .profile-remove-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 48px;
+  min-height: 48px;
+  margin: 0;
+  padding: 0 20px;
+  border: 1px solid #d8c6ae;
+  border-radius: 10px;
+  background: #fffaf2;
+  color: #4a3321;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.profile-photo-actions .profile-edit-button {
+  border-color: #4a3321;
+  background: #4a3321;
+  color: #fff;
+}
+
+.profile-photo-actions .profile-edit-button:hover,
+.profile-photo-actions .profile-camera-button:hover {
+  border-color: #79562e;
+  background: #79562e;
+  color: #fff;
+}
+
+.profile-photo-actions .profile-remove-button {
+  border-color: #e8c5bf;
+  background: #fffaf6;
+  color: #9a3d32;
+}
+
+.profile-photo-actions .profile-remove-button:hover {
+  border-color: #9a3d32;
+  background: #9a3d32;
+  color: #fff;
+}
+
+.profile-photo-actions button:focus-visible {
+  outline: 3px solid #c49a5a;
+  outline-offset: 3px;
+}
+
+.profile-photo-hint {
+  flex-basis: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #817468;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.profile-file-input,
+.profile-hidden-canvas {
+  display: none;
+}
+
+/* Name and email */
+.profile-card h2 {
+  margin: 18px 0 8px;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.profile-card > p {
+  color: #817468;
+  overflow-wrap: anywhere;
+}
+
+/* General profile buttons */
+.profile-edit-button,
+.profile-save-button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 9px;
+  background: #4a3321;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.profile-edit-button {
+  margin-top: 12px;
+}
+
+.profile-save-button {
+  margin-top: 22px;
+}
+
+.profile-message {
+  margin-top: 16px;
+  color: #47764a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Edit profile form */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.profile-form label {
+  margin: 14px 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid #ded3c5;
+  border-radius: 9px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.profile-form input:focus {
+  border-color: #a67a39;
+  outline: 2px solid #a67a3920;
+}
+
+/* Camera popup */
+.camera-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(28, 20, 14, 0.76);
+}
+
+.camera-dialog {
+  box-sizing: border-box;
+  width: min(100%, 560px);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 22px;
+  border-radius: 18px;
+  background: #fffaf2;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.25);
+}
+
+.camera-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.camera-dialog-header h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.camera-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e9dfd1;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.camera-preview {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
+  min-height: 200px;
+  border-radius: 12px;
+  background: #201a16;
+  object-fit: cover;
+}
+
+.camera-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.camera-actions .profile-save-button,
+.camera-actions .profile-camera-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0 18px;
+}
+
+.camera-error {
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9e8e5;
+  color: #8e3028;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Tablet and mobile */
+@media (max-width: 520px) {
+  .profile-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .profile-content {
+    padding: 35px 16px;
+  }
+
+  .profile-content h1 {
+    font-size: 36px;
+  }
+
+  .profile-card {
+    padding: 22px;
+  }
+
+  .profile-photo-actions {
+    gap: 8px;
+  }
+
+  .profile-photo-actions .profile-edit-button,
+  .profile-photo-actions .profile-camera-button,
+  .profile-photo-actions .profile-remove-button {
+    height: 44px;
+    min-height: 44px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .camera-dialog {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,189 @@
+
+/* ===== OM GAYATRI TRADERS FOOTER ===== */
+
+.og-footer {
+  background: #17202b;
+  color: #f5f5f5;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.og-footer-main {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 55px 25px 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  gap: 35px;
+}
+
+/* Shop logo and name */
+
+.og-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.og-footer-mark {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #f59e0b;
+  color: #17202b;
+  font-size: 20px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.og-footer-logo small {
+  display: block;
+  margin-top: 5px;
+  color: #f59e0b;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.og-footer-brand > p {
+  color: #c5cbd3;
+  line-height: 1.8;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+/* Footer columns */
+
+.og-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.og-footer-column h3 {
+  color: #f59e0b;
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.og-footer-column a {
+  color: #d6dbe2;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+  overflow-wrap: anywhere;
+}
+
+.og-footer-column a:hover {
+  color: #f59e0b;
+}
+
+.og-footer-column p {
+  color: #c5cbd3;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.og-footer-column p strong {
+  color: #ffffff;
+}
+
+/* WhatsApp enquiry button */
+
+.og-footer-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #16a34a;
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.og-footer-cta:hover {
+  background: #15803d;
+}
+
+/* Google Maps button */
+
+.og-footer-directions {
+  display: inline-block;
+  background: #f59e0b;
+  color: #17202b !important;
+  padding: 11px 14px;
+  border-radius: 7px;
+  font-weight: 700;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.og-footer-directions:hover {
+  background: #fbbf24;
+}
+
+/* Bottom copyright bar */
+
+.og-footer-bottom {
+  border-top: 1px solid #35404e;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.og-footer-bottom p {
+  color: #aeb7c3;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .og-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 25px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 550px) {
+  .og-footer-main {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+    gap: 30px;
+  }
+
+  .og-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px;
+  }
+
+  .og-footer-logo {
+    font-size: 16px;
+  }
+
+  .og-footer-mark {
+    width: 43px;
+    height: 43px;
+  }
+}

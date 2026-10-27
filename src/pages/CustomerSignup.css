@@ -1,0 +1,59 @@
+
+/* Customer signup page */
+.auth-form-wrap {
+  max-width: 430px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.auth-form label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.auth-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  margin-bottom: 16px;
+  padding: 0 13px;
+  border: 1px solid #ded3c5;
+  border-radius: 10px;
+  background: #fff;
+  color: #30251c;
+  font-size: 14px;
+}
+
+.auth-form input:focus {
+  outline: 2px solid #a67a39;
+  outline-offset: 1px;
+}
+
+.auth-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #4a3321;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background: #79562e;
+}
+
+@media (max-width: 800px) {
+  .auth-form-wrap {
+    max-width: 100%;
+  }
+}
